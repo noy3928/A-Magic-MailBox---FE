@@ -27,6 +27,12 @@ module.exports = {
     "jsx-a11y/no-noninteractive-element-interactions": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
   },
+  "react/function-component-definition": [
+    2,
+    {
+      namedComponents: "function-declaration" | "arrow-function",
+    },
+  ],
   settings: {
     "import/resolver": {
       node: {
