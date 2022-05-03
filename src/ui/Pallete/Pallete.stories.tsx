@@ -34,14 +34,6 @@ const Template: ComponentStory<typeof Pallete> = () => {
 };
 
 export const DefaultButton = Template.bind({});
-DefaultButton.args = {
-  text: '입장하기',
-};
-
-export const DefaultButton1 = Template.bind({});
-DefaultButton1.args = {
-  text: '테스트',
-};
 
 const Container = styled.div`
   width: 500px;

@@ -1,14 +1,7 @@
 import styled from '@emotion/styled';
-import logo from './logo.svg';
-import './App.css';
-import Pallete from './ui/Pallete/Pallete';
 
 const App = () => {
-  return (
-    <Container>
-      <Pallete />
-    </Container>
-  );
+  return <Container>React</Container>;
 };
 
 const Container = styled.div``;
