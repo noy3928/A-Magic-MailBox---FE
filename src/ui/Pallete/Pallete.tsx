@@ -20,11 +20,14 @@ const Pallete = () => {
 };
 
 const Container = styled.div`
+  align-items: center;
+  background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
-  background-color: #f4f4f4;
   padding: 20px;
   border-radius: 20px;
+  gap: 10px;
+  width: fit-content;
 `;
 
 export default Pallete;

@@ -15,7 +15,9 @@ const Button = ({ text }: ButtonProps) => {
 
 const Container = styled.div`
   border: 1px solid #ff7a00;
+  border-radius: 30px;
   padding: 12px 28px;
+  width: fit-content;
 `;
 
 const Text = styled.div`
