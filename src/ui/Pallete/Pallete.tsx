@@ -1,16 +1,19 @@
-import react from "React";
-import styled from "@emotion/styled";
-import { palletes } from "./palletes";
-
-type StyleTheme = {
-  bgColor: string;
-};
+import react from 'React';
+import styled from '@emotion/styled';
+import { palletes } from './palletes';
+import Circle from './Circle';
 
 const Pallete = () => {
   return (
     <Container>
       {palletes.map((data) => {
-        return <Circle bgColor={data.bgColor} />;
+        return (
+          <Circle
+            key={data.type}
+            mainColor={data.mainColor}
+            bgColor={data.bgColor}
+          />
+        );
       })}
     </Container>
   );
@@ -21,13 +24,7 @@ const Container = styled.div`
   flex-direction: column;
   background-color: #f4f4f4;
   padding: 20px;
-`;
-
-const Circle = styled.div<StyleTheme>`
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: ${(props) => props.bgColor};
+  border-radius: 20px;
 `;
 
 export default Pallete;

@@ -1,9 +1,16 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Pallete from "../src/ui/Pallete/Pallete.tsx";
+import styled from '@emotion/styled';
+import logo from './logo.svg';
+import './App.css';
+import Pallete from './ui/Pallete/Pallete';
 
-function App() {
-  return <Pallete />;
-}
+const App = () => {
+  return (
+    <Container>
+      <Pallete />
+    </Container>
+  );
+};
+
+const Container = styled.div``;
 
 export default App;
