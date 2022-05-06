@@ -1,12 +1,17 @@
-import react from 'React';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { palletes } from './palletes';
+import { palletes, PalletesType } from './palletes';
 import Circle from './Circle';
+import ReversedCircle from './ReverseCircle';
 
 const Pallete = () => {
+  const [isReversed, setIsReversed] = useState(false);
+  const pallete = isReversed ? palletes.reversed : palletes.normal;
+
   return (
     <Container>
-      {palletes.map((data) => {
+      <ReversedCircle onClick={() => setIsReversed(!isReversed)} />
+      {pallete.map((data) => {
         return (
           <Circle
             key={data.type}
@@ -25,8 +30,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border-radius: 20px;
-  gap: 10px;
+  border-radius: 40px;
+  gap: 20px;
   width: fit-content;
 `;
 
